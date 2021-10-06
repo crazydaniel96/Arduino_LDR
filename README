@@ -1,0 +1,29 @@
+==================================================
+LDR lib for Polimi sensors' project
+==================================================
+= Daniele d'Arenzo, 2021                         =
+==================================================
+
+
+Devel Notes
+-----------
+This library was developed on vscode, built with avr-gcc on Atmega8 @ 8MHz
+
+
+Methods
+-----------
+
+LDR( float percentage, int LDR_Pin) 
+init LDR with change trigger percentage (0-1 range, negative value admitted -> inverted check) and Analog pin 
+
+calibrate();
+automatically calibrate LDR with a new reference
+
+check_activation();
+return a boolean value (up or below percentage treshold)
+
+read_volts();
+return a float value with lecture in volts
+
+read_bits();
+return a int value with lecture in bits (0-1023)
